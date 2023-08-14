@@ -1,6 +1,12 @@
-import express, { Application } from "express";
-import "dotenv/config";
+import "express-async-errors";
+import express, { Application, json } from "express";
+import { developersRouter } from "./routers/developers.router/developers.router";
+import { HandleError } from "./errors/handle.erros";
+import { projectsRouter } from "./routers/projects.router/projects.router";
 
-const app: Application = express();
+export const app: Application = express();
+app.use(json());
 
-export default app;
+app.use("/developers", developersRouter);
+app.use("/projects", projectsRouter);
+app.use(HandleError);

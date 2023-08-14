@@ -1,8 +1,8 @@
 import { main } from '../../configs/configTestsDatabase'
 import supertest from 'supertest'
-import app from '../../../app'
+import { app } from '../../../app'
 import { developer1 } from '../../mocks/developers.mock'
-import { client } from '../../../database'
+import { client } from '../../../database/database'
 
 describe('POST - /developers', () => {
     beforeAll(async () => {

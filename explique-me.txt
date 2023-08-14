@@ -1,0 +1,29 @@
+POST
+
+/developers
+
+Cadastrar um novo desenvolvedor
+
+GET
+
+/developers/:id
+
+Listar um desenvolvedor e suas informações
+
+PATCH
+
+/developers/:id
+
+Atualizar os dados de um desenvolvedor
+
+DELETE
+
+/developers/:id
+
+Remover um desenvolvedor
+
+POST
+
+/developers/:id/infos
+
+Cadastrar informações adicionais a um desenvolvedor

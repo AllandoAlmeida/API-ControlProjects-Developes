@@ -1,12 +1,12 @@
 import supertest from 'supertest'
 import { main } from '../../configs/configTestsDatabase'
-import app from '../../../app'
+import { app } from '../../../app'
 import { developer1, developer2, developer3 } from '../../mocks/developers.mock'
 import {
     developerInfo1,
     developerInfoNotAccepted,
 } from '../../mocks/developerInfo.mock'
-import { client } from '../../../database'
+import { client } from '../../../database/database'
 
 describe('POST - /developers/:id/infos', () => {
     beforeAll(async () => {
